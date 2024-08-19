@@ -27,7 +27,7 @@
 #define __UTIL_H__ 1
 
 #include <TimeLib.h>
-#include "wifi.h"
+#include "mywifi.h"
 
 #if DBG
 /*

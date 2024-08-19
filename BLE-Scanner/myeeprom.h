@@ -23,8 +23,8 @@
 
 */
 
-#ifndef __EPROM_H__
-#define __EPROM_H__ 1
+#ifndef __MYEPROM_H__
+#define __MYEPROM_H__ 1
 
 #include <stdio.h>
 #include <string.h>

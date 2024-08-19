@@ -55,7 +55,7 @@
   tags to mark the configuration in the EEPROM
 */
 #define CONFIG_MAGIC      __TITLE__ "-CONFIG"
-#define CONFIG_VERSION    5
+#define CONFIG_VERSION    10
 
 /*
    sub-systems config structs

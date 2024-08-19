@@ -25,7 +25,7 @@
 
 #include "config.h"
 #include "watchdog.h"
-#include "wifi.h"
+#include "mywifi.h"
 #include "state.h"
 #include "util.h"
 

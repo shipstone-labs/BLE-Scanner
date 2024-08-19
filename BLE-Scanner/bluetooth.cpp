@@ -48,10 +48,10 @@ class BLEScannerAdvertisedDeviceCallbacks : public NimBLEAdvertisedDeviceCallbac
       /*
          we only put devices onto the list, which don't use random addresses
       */
-      if (advertisedDevice->getAddressType() == BLE_ADDR_PUBLIC) {
+      if (true || advertisedDevice->getAddressType() == BLE_ADDR_PUBLIC) {
         /*
            check the service UUIDs
-        */
+        */ 
         bool hasBatteryService = false;
 
         for (int n = 0; n < advertisedDevice->getServiceUUIDCount(); n++) {
@@ -66,8 +66,9 @@ class BLEScannerAdvertisedDeviceCallbacks : public NimBLEAdvertisedDeviceCallbac
         if (advertisedDevice->haveManufacturerData())
           advertisedDevice->getManufacturerData().copy((char *) &manufacturer_id, 2, 0);
 
+        char* name = advertisedDevice->getName().c_str();
         ScanDevAdd(advertisedDevice->getAddress(),
-                   advertisedDevice->getName().c_str(),
+                   name,
                    manufacturer_id,
                    advertisedDevice->getRSSI(),
                    hasBatteryService);
